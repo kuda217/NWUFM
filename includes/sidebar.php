@@ -49,7 +49,7 @@
     <!-- Side Widget Well -->
     <div class="well">
         <h4>Recent Activity</h4>
-        <p>I still don't know what I am going to do with this column but it will be fun ;)</p>
+        <p>I still don't know what I am going to do with this column but it will be fun ;), twitter panel maybe?</p>
     </div>
 
 </div>

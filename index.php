@@ -1,6 +1,7 @@
 <?php
 
 include "includes/header.php";
+include "includes/dbcon.php";
 
  ?>
 
@@ -15,21 +16,38 @@ include "includes/navigation.php";
 
             <!-- Blog Post Content Column -->
             <div class="col-lg-8">
+              <?php
+              $query = "SELECT * FROM blogs";
+              $select_all_blogs_query = mysqli_query($connection, $query);
+
+              while($row = mysqli_fetch_assoc($select_all_blogs_query)){
+                $post_title = $row['title'];
+                $post_author = $row['author'];
+                $post_date = $row['date'];
+                $post_image = $row['image'];
+                $post_content = $row['content'];
+                $post_tags = $row['tags'];
+                $post_comment_count = $row['comment_count'];
+                $post_title;
+                ?>
 
                 <!-- Blog Post -->
 
                 <!-- Title -->
-                <h1>NWUFM Dev Blog</h1>
+                <h1>
+                  <a href="#"><?php echo $post_title; ?></a>
+
+                </h1>
 
                 <!-- Author -->
                 <p class="lead">
-                    by <a href="#">k0dA_Machina</a>
+                    by <a href="#"><?php echo $post_author; ?></a>
                 </p>
 
                 <hr>
 
                 <!-- Date/Time -->
-                <p><span class="glyphicon glyphicon-time"></span> Loading... 2016</p>
+                <p><span class="glyphicon glyphicon-time"></span><?php echo $post_date; ?></p>
 
                 <hr>
 
@@ -39,10 +57,15 @@ include "includes/navigation.php";
                 <hr>
 
                 <!-- Post Content -->
-                <p class="lead">NWUFM CMS Under Construction</p>
-                <p>This month marks the initialization of the North-West University FM website build. Stay tuned for more information.</p>
+                <p class="lead"><?php echo $post_content; ?></p>
+                <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
 
                 <hr>
+                <hr><a href="#"><?php echo $post_comment_count. " Comments "; ?></hr>
+
+<?php       }     ?>
+
+
 
                 <!-- Blog Comments -->
 
