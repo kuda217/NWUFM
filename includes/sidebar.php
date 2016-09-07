@@ -56,7 +56,7 @@
     <!-- Side Widget Well -->
     <div class="well">
         <h4>Recent Activity</h4>
-        <p>I still don't know what I am going to do with this column but it will be fun ;), twitter panel maybe?</p>
+        <a class="twitter-timeline" href="https://twitter.com/nwufm1055">Tweets by nwufm1055</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
 
 </div>
