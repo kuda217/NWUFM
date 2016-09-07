@@ -20,7 +20,7 @@ include "includes/navigation.php";
               $query = "SELECT * FROM blogs";
               $select_all_blogs_query = mysqli_query($connection, $query);
 
-              while($row = mysqli_fetch_assoc($select_all_blogs_query)){
+                $row = mysqli_fetch_assoc($select_all_blogs_query);
                 $post_title = $row['title'];
                 $post_author = $row['author'];
                 $post_date = $row['date'];
@@ -33,39 +33,34 @@ include "includes/navigation.php";
 
                 <!-- Blog Post -->
 
-                <!-- Title -->
-                <h1>
-                  <a href="#"><?php echo $post_title; ?></a>
+              <!-- Title -->
+              <h1>
+                <a href="#"><?php echo $post_title; ?></a>
 
-                </h1>
+              </h1>
 
-                <!-- Author -->
-                <p class="lead">
-                    by <a href="#"><?php echo $post_author; ?></a>
-                </p>
+              <!-- Author -->
+              <p class="lead">
+                  by <a href="#"><?php echo $post_author; ?></a>
+              </p>
 
-                <hr>
+              <hr>
 
-                <!-- Date/Time -->
-                <p><span class="glyphicon glyphicon-time"></span><?php echo $post_date; ?></p>
+              <!-- Date/Time -->
+              <p><span class="glyphicon glyphicon-time"></span><?php echo $post_date; ?></p>
 
-                <hr>
+              <hr>
 
-                <!-- Preview Image -->
-                <img class="img-responsive" src="images/<?php echo $post_image; ?>" alt="">
+              <!-- Preview Image -->
+              <img class="img-responsive" src="images/<?php echo $post_image; ?>" alt="">
 
-                <hr>
+              <hr>
 
-                <!-- Post Content -->
-                <p class="lead"><?php echo $post_content; ?></p>
-                <a class="btn btn-primary" href="blog.php">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+              <!-- Post Content -->
+              <p class="lead"><?php echo $post_content; ?></p>
+              <!--<a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a> -->
 
-                <hr>
-
-
-<?php       }     ?>
-
-
+              <hr>
 
                 <!-- Blog Comments -->
 
@@ -74,7 +69,7 @@ include "includes/navigation.php";
                 <hr>
 
                 <!-- Posted Comments -->
-              <?php //include "includes/comments.php"; ?>
+              <?php include "includes/comments.php"; ?>
                 <!-- Comment -->
 </div>
             <!-- Blog Sidebar Widgets Column -->
