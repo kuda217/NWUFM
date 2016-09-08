@@ -17,10 +17,10 @@
                     <a href="#">About</a>
                 </li>
                 <li>
-                    <a href="#">Services</a>
+                    <a href="#">Contact Us</a>
                 </li>
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="admin/index.php">Admin</a>
                 </li>
             </ul>
         </div>
