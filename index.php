@@ -1,5 +1,4 @@
 <?php
-
 include "includes/header.php";
 include "includes/dbcon.php";
 
@@ -21,6 +20,7 @@ include "includes/navigation.php";
               $select_all_blogs_query = mysqli_query($connection, $query);
 
               while($row = mysqli_fetch_assoc($select_all_blogs_query)){
+                $post_id = $row['blog_id'];
                 $post_title = $row['title'];
                 $post_author = $row['author'];
                 $post_date = $row['date'];
@@ -35,7 +35,7 @@ include "includes/navigation.php";
 
                 <!-- Title -->
                 <h1>
-                  <a href="#"><?php echo $post_title; ?></a>
+                  <a href="blog.php"><?php echo $post_title; ?></a>
 
                 </h1>
 
