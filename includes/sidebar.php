@@ -23,32 +23,27 @@
 
     <!-- Blog Categories Well -->
     <div class="well">
-        <h4>Blog Categories or something</h4>
+<?php
+
+$query = "SELECT * FROM blogs";
+$select_posts_sidebar = mysqli_query($connection, $query);
+
+ ?>
+
+        <h4>Previous Posts</h4>
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-12">
                 <ul class="list-unstyled">
-                    <li><a href="#">Blah...</a>
-                    </li>
-                    <li><a href="#">Blah...</a>
-                    </li>
-                    <li><a href="#">Blah...</a>
-                    </li>
-                    <li><a href="#">Blah...</a>
-                    </li>
+                  <?php
+                      while($row = mysqli_fetch_assoc($select_posts_sidebar)){
+
+                          $b_title = $row['title'];
+                          echo "<li><a href='#'>{$b_title}</a></li>";
+                      }
+                   ?>
                 </ul>
             </div>
-            <div class="col-lg-6">
-                <ul class="list-unstyled">
-                    <li><a href="#">Blah...</a>
-                    </li>
-                    <li><a href="#">Blah...</a>
-                    </li>
-                    <li><a href="#">Blah...</a>
-                    </li>
-                    <li><a href="#">Blah...</a>
-                    </li>
-                </ul>
-            </div>
+
         </div>
         <!-- /.row -->
     </div>
