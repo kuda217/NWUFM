@@ -50,7 +50,7 @@
                 <a href="javascript:;" data-toggle="collapse" data-target="#users"><i class="fa fa-fw fa-user"></i> Users <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="users" class="collapse">
                     <li>
-                        <a href="#">Add New User</a>
+                        <a href="user-add.php">Add New User</a>
                     </li>
                     <li>
                         <a href="#">Manage Existing Users</a>
