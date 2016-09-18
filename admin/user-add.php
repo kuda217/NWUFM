@@ -56,7 +56,7 @@
                           }
                           else{
 
-                            $hashFormat = "$2y$10$";
+                            $hashFormat = "$2y$21$";
                             $salt = "youshallnotpassyoudixk";
                             $hF_and_salt = $hashFormat . $salt;
                             $password = crypt($password, $hF_and_salt);
