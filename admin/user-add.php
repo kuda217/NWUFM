@@ -42,7 +42,7 @@
 
                           if (empty($name) || empty($password) || empty($pwdverify) || empty($fname) || empty($lname) || empty($email)){
 
-                            echo "Please complete all fields before submitting the blog. (Image is optional)";
+                            echo "Please complete all fields.";
                           } elseif($password != $pwdverify){
 
                                 echo "Passwords do not match.";
@@ -56,7 +56,7 @@
                           }
                           else{
 
-                            $hashFormat = "$2y$21$";
+                            $hashFormat = "$2y$12$";
                             $salt = "youshallnotpassyoudixk";
                             $hF_and_salt = $hashFormat . $salt;
                             $password = crypt($password, $hF_and_salt);
